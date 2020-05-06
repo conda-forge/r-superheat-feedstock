@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = "0.1.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -16,7 +16,7 @@ source:
 
 build:
   noarch: generic
-  number: 1001
+  number: 1002
   rpaths:
     - lib/R/lib/
     - lib/
@@ -49,9 +49,8 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=superheat
-  license: CC0
-  summary: A system for generating extendable and customizable heatmaps for exploring complex
-    datasets, including big data and data with multiple data types.
+  license: CC0-1.0
+  summary: A system for generating extendable and customizable heatmaps for exploring complex datasets, including big data and data with multiple data types.
   license_family: OTHER
 
 extra:
