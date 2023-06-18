@@ -1,11 +1,11 @@
-About r-superheat
-=================
+About r-superheat-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-superheat-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=superheat
 
 Package license: CC0-1.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-superheat-feedstock/blob/main/LICENSE.txt)
 
 Summary: A system for generating extendable and customizable heatmaps for exploring complex datasets, including big data and data with multiple data types.
 
