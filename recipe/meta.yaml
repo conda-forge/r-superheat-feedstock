@@ -1,5 +1,4 @@
 {% set version = "0.1.0" %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,15 +7,14 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: superheat_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/superheat_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/superheat/superheat_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/superheat_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/superheat/superheat_{{ version }}.tar.gz
   sha256: 03bdc76167e10e0fbfcf3ef849399fa3a018b29ec35f53a954aeccd0afd16807
 
 build:
   noarch: generic
-  number: 1004
+  number: 1005
   rpaths:
     - lib/R/lib/
     - lib/
@@ -31,7 +29,6 @@ requirements:
     - r-magrittr >=1.5
     - r-plyr >=1.8.3
     - r-scales >=0.3.0
-
   run:
     - r-base
     - r-dplyr >=0.4.3
@@ -51,7 +48,9 @@ about:
   home: https://CRAN.R-project.org/package=superheat
   license: CC0-1.0
   summary: A system for generating extendable and customizable heatmaps for exploring complex datasets, including big data and data with multiple data types.
-  license_family: OTHER
+  license_family: CC
+  license_file:
+    - LICENSE-CC0
 
 extra:
   recipe-maintainers:
